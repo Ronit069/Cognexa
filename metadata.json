@@ -1,0 +1,6 @@
+{
+  "name": "Cognexa Universal Intel",
+  "description": "Real-time neuro-symbolic correlation of IoT endpoints, SCADA, SAP S/4HANA ERP, Confluence SOP archives, and autonomous AI agents across cyber-physical manufacturing operations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
