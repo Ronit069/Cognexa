@@ -25,7 +25,7 @@ import { OnboardingView } from './components/views/OnboardingView';
 export default function App() {
   const [currentView, setCurrentView] = useState<ViewMode>('command-center');
   const [currentPlant, setCurrentPlant] = useState<PlantLocation>(PLANTS[0]);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const [isAskModalOpen, setIsAskModalOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');

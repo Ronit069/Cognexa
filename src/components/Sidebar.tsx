@@ -142,31 +142,31 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
         </div>
 
-        <div className="flex items-center justify-between px-space-md py-space-xs rounded-lg bg-surface-container-high">
-          <div className="flex items-center gap-space-sm">
-            <span className="material-symbols-outlined text-sm text-on-surface-variant">dark_mode</span>
-            <span className="font-label-md text-label-md text-on-surface-variant">Interface</span>
-          </div>
-          <div className="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded-full">
-            <button
-              aria-label="Dark mode"
-              onClick={() => onToggleDarkMode(true)}
-              className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${
-                isDarkMode ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-            >
-              <span className="material-symbols-outlined text-xs">dark_mode</span>
-            </button>
-            <button
-              aria-label="Light mode"
-              onClick={() => onToggleDarkMode(false)}
-              className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${
-                !isDarkMode ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-            >
-              <span className="material-symbols-outlined text-xs">light_mode</span>
-            </button>
-          </div>
+        <div className="flex items-center justify-between bg-surface-container p-1 rounded-lg">
+          <button
+            type="button"
+            onClick={() => onToggleDarkMode(false)}
+            className={`flex-1 flex items-center justify-center gap-1.5 py-1 rounded font-label-sm text-label-sm transition-all cursor-pointer ${
+              !isDarkMode
+                ? 'bg-surface-container-lowest text-primary shadow-sm font-bold'
+                : 'text-outline hover:text-on-surface'
+            }`}
+          >
+            <span className="material-symbols-outlined text-[16px]">light_mode</span>
+            <span>Light</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => onToggleDarkMode(true)}
+            className={`flex-1 flex items-center justify-center gap-1.5 py-1 rounded font-label-sm text-label-sm transition-all cursor-pointer ${
+              isDarkMode
+                ? 'bg-surface-container-lowest text-primary shadow-sm font-bold'
+                : 'text-outline hover:text-on-surface'
+            }`}
+          >
+            <span className="material-symbols-outlined text-[16px]">dark_mode</span>
+            <span>Dark</span>
+          </button>
         </div>
       </div>
     </aside>

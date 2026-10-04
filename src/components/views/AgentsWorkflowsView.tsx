@@ -480,11 +480,28 @@ export const AgentsWorkflowsView: React.FC = () => {
                   <span className="material-symbols-outlined text-primary mt-0.5">verified_user</span>
                   <div>
                     <h4 className="font-headline-sm text-headline-sm text-on-surface font-semibold">
-                      Human-in-the-Loop Safety Gate
+                      Human-in-the-Loop Safety Gate &amp; eIDAS Sign
                     </h4>
                     <p className="font-body-sm text-body-sm text-on-surface-variant">
                       Target: Lead Plant Engineer (Dr. Sarah Chen)
                     </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between p-space-xs bg-surface-container rounded-lg my-1">
+                  <div className="flex items-center gap-space-xs">
+                    <img 
+                      className="w-7 h-7 rounded-full object-cover" 
+                      alt="Dr. Sarah Chen" 
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHi2A0TDcvF4GoEOgd1DJjofs6zx8xtDnMqyQsl5u6n_DbiAABxZ2fHRFqag-5mlBgq_vFotccLQzcgc4G36DtKaZ3KjWcjyM6Ed4D_BrcdCvqs2MgtpnLIm2oT22Wm6_HeMs5u64eEoI8DjARdnIhsaleIJmG2bpc4UKA9bdYeqaewNbJxjIqpUVp40Ea0ocLyZX0nIArxmrFUGhR009vG9wVyzdH2S7_vs62Fv9wH1EJXwMSgBtg" 
+                    />
+                    <div className="flex flex-col">
+                      <span className="font-label-md text-label-md font-semibold text-on-surface">Dr. Sarah Chen</span>
+                      <span className="font-body-sm text-[10px] text-on-surface-variant">Lead Plant Engineer • On Shift</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-[11px] font-code-md text-tertiary bg-surface-container-lowest px-space-xs py-0.5 rounded shadow-sm">
+                    <span className="material-symbols-outlined text-[14px]">token</span>
+                    <span>eIDAS Level 3 Required</span>
                   </div>
                 </div>
                 <div className="p-2 rounded bg-surface-container-lowest/90 font-mono text-[11px] space-y-1 border border-surface-container-high/30">
@@ -590,11 +607,11 @@ export const AgentsWorkflowsView: React.FC = () => {
                   <div className="p-2 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-between border border-surface-container-high/30">
                     <div className="flex items-center gap-2 min-w-0">
                       <img
-                        className="w-5 h-5 rounded-full object-cover shrink-0"
+                        className="w-6 h-6 rounded-full object-cover shrink-0 ring-1 ring-primary/40"
                         alt="Dr. Sarah Chen"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCxNbs4X1arJiJq_YgJs4R-GrVXA7m-QMG4jxyDGkAXGshpD9Wm6VtqqRrkJrKCnkTUK1PsC6iwwqL1DITO12lSZVi1pPHQLGHkxfIbE9UMYneZyav_kYH3taqCYBZUaGZ4FS4c1i0KmHvr1QkipP8we9Hyql029mAuy4OhYUcakSiIgY86bwzY0VhxK7YkvK-cqxgr_56KUWGfIUBNwSTl569WR-N47Yvhbx-_3aoG_zrm0pZdlFr"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzhpM1YnrtKuzfzRItBYYShLMzR6FehdEJxhPlBhYU6bCQ-m5SFTl75JFmi8GMfLbSZUgyAQUbzIbA3BjjbCETYrHbdT-DI5C6X4JPgBh8DKYm5FcAKVPK6lqMqTKazscZiCCp4x5ri8yG5kvEwOyal-rYc5onGInbkyPks8w5_Jl7WjMHB4jt3gKpnXBPfBoh-o8J5FyLMvoH8tKzIqkNzXe_ABqwrJD-eL5tj4cGTj1IWeidW_8d"
                       />
-                      <span className="font-body-sm text-body-sm text-on-surface truncate">Dr. Sarah Chen</span>
+                      <span className="font-body-sm text-body-sm text-on-surface truncate font-semibold">Dr. Sarah Chen</span>
                     </div>
                     <span className="font-label-sm text-label-sm text-secondary font-mono text-[10px]">L3 AUTH</span>
                   </div>

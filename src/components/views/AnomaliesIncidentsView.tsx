@@ -19,8 +19,8 @@ export const AnomaliesIncidentsView: React.FC<AnomaliesIncidentsViewProps> = ({
       sender: 'Dr. Sarah Chen',
       role: 'Plant Eng Lead',
       time: '14:24 UTC (10m ago)',
-      text: 'Telemetry matches the March vibration signature. Throttling approved to 65%. Maintenance crew Marco & Dev dispatched to Line 3 bay.',
-      avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBT6XVJ1ShICA9T8OsS1Yk3c-SKgOfxvhNBTLebMWeFn4NMMstOH7rHAQFlw3fKpiqB3ScGfzXmHekmLN6Qbt6thsxfhWNg26452ZxM331LNS4WL5UdgyOs9Su9kMNc6LB4inHlNTLbDklYBs-HG8t0nhbQnF5u23LjmCCedPaQioq1d5BG8MNAl3xLa0Mp0bh3DbGg8mFR6hU4-Zi_yQI2NHPkvaoTA_kx17EagVO-33h2HOCbg5Mm'
+      text: 'Reviewing telemetry against line shift targets. Is the secondary chiller loop active?',
+      avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCxac8HyJc6UbvlrcdhT2Vln4gfidqjQcow4zT9W6c8YrF73ruLdbOmPHkaGp9E2qNV20D0SVxC7TtiHPwLx5vpSG1txIJ4lcftLZhdYhQ4hshwwzsnBWFN9RQbGvJisfDyWTjhqkoCw6YSJomKGnfG5fVIPXjqO7oN9SklkRb8wmndICM_4sL6S1N7hTcaEF-88KNVZPX3RaQsLdgE_U1TobqJ8BXt8fX3PurbRQPSYIIhlDaxcEDW'
     },
     {
       sender: 'Agent Atlas',
@@ -668,6 +668,53 @@ export const AnomaliesIncidentsView: React.FC<AnomaliesIncidentsViewProps> = ({
                     >
                       Dismiss
                     </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* PHYSICAL LINE SNAPSHOT & ACOUSTIC SIGNATURE */}
+            <div className="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm border border-surface-container-high/30">
+              <div className="flex items-center justify-between">
+                <span className="font-label-lg text-label-lg font-bold text-on-surface uppercase tracking-wider">
+                  Physical Line Snapshot &amp; Acoustic Signature
+                </span>
+                <span className="font-label-sm text-label-sm text-on-surface-variant font-mono">
+                  Munich Assembly Floor Camera 07-B
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md items-center">
+                <div className="relative rounded-lg overflow-hidden shadow-sm h-48 bg-surface-container">
+                  <img
+                    className="w-full h-full object-cover"
+                    alt="High-resolution industrial camera capture of a precision turbine assembly spindle line"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOMJ3e_lNgEVbfXVX0A8YRmlQti6HETGME7CG7T6SEAiYYZbg9nFMMS-kNnK2isUoZRSjZoym4JMwo0BYK8J2EGJmqELK8uXgm-QrDOZfdxn51MZc4yLR6whQx_wlsAnaDoGNyDwO_cn3Yfq0w5K_7FSyCINpcG04A9mfzF56MUgOkLAPMDyMuL8527b7EdMdx8YnuV8srtMfUsapH6txosY_NGUz0QUVIxwFcU_mdzBqBXBkJYHF8"
+                  />
+                  <div className="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-0.5 rounded text-[11px] font-code-md text-on-surface flex items-center gap-1 shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-error animate-ping"></span> CAM-TURBINE-07-L3
+                  </div>
+                  <div className="absolute bottom-2 right-2 bg-surface-container-lowest/95 px-2 py-1 rounded text-label-sm font-label-sm text-error font-bold shadow-sm">
+                    HARMONIC STRESS DETECTED
+                  </div>
+                </div>
+                <div className="flex flex-col gap-space-xs justify-between h-full py-1">
+                  <div className="bg-surface-container-low p-space-sm rounded-lg border border-surface-container-high/20">
+                    <span className="font-label-sm text-label-sm text-outline uppercase font-semibold">Sensor Ingestion Endpoint</span>
+                    <p className="font-code-md text-code-md font-bold text-on-surface mt-0.5 select-all">
+                      spindle_vibe.edge.de.munich.cognexa/telemetry
+                    </p>
+                  </div>
+                  <div className="bg-surface-container-low p-space-sm rounded-lg border border-surface-container-high/20">
+                    <span className="font-label-sm text-label-sm text-outline uppercase font-semibold">Bearing Degradation Model</span>
+                    <p className="font-code-md text-code-md text-on-surface mt-0.5">
+                      ISO 10816-3 Class II • Severity Zone D
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-space-xs pt-1">
+                    <span className="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+                    <span className="font-body-sm text-body-sm text-on-surface-variant">
+                      Edge model checkpoint synced with AWS IoT SiteWise
+                    </span>
                   </div>
                 </div>
               </div>

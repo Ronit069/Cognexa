@@ -432,6 +432,28 @@ export const IoTDevicesView: React.FC = () => {
             })}
           </div>
 
+          {/* Factory Floor Context Banner */}
+          <div className="bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md border border-surface-container-high/40">
+            <div className="flex items-center gap-space-md">
+              <img
+                className="w-16 h-12 rounded-lg object-cover shadow-sm shrink-0"
+                alt="High precision industrial cleanroom automated factory floor"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzWogTx64LEDR1B2JHz0KmwF7OYUz1Pbt7dMDQabQHiWzrCaxf42G-pOobTdTvnLfrkpUejrRCt1b7iDpIcNAbd6nrqm1BkGuCZwXAFbt8kkIe_BT7N_QW2F8iAu7pQlOmJ64siGXMy5sd2WmVCNJJ0su0viNdGtFesmxhdBVeu0uQZgpQA64SKAClMx35aHkqdng7TrwLF19kY0ILDcd0HujtAvinJ2KzUcpknn36mrTU9jllvpdZ"
+              />
+              <div>
+                <div className="font-label-lg text-label-lg font-bold text-on-surface">Physical Rig: Sector Gantry 04-Nord</div>
+                <div className="font-body-sm text-body-sm text-on-surface-variant">Assigned Gateway: RPi4-GW-MNCH-02 with dual-redundant LoRaWAN + CAN-bus backhaul</div>
+              </div>
+            </div>
+            <button
+              onClick={() => showToast('Streaming 3D Twin for Sector Gantry 04-Nord')}
+              className="px-space-md py-1.5 bg-surface-container text-primary hover:bg-surface-container-high transition-colors rounded font-label-md text-label-md font-semibold shrink-0 cursor-pointer shadow-sm"
+              type="button"
+            >
+              Inspect Rack 3D Twin
+            </button>
+          </div>
+
           {/* Mesh Diagnostics Strip */}
           <div className="rounded bg-surface-container-low p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm border border-surface-container-high/40">
             <div className="flex items-center gap-space-sm">

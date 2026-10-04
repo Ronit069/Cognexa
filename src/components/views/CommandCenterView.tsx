@@ -379,8 +379,26 @@ export const CommandCenterView: React.FC<CommandCenterViewProps> = ({
               </span>
             </div>
 
-            {/* Sensor Gauges Cards */}
-            <div className="grid grid-cols-3 gap-space-sm">
+            {/* Bay 04 High-Speed Optical & FFT Stream */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+              <div className="relative rounded-lg overflow-hidden h-44 bg-surface-container-low flex flex-col justify-end p-space-sm group border border-surface-container-high/40">
+                <img 
+                  className="absolute inset-0 w-full h-full object-cover" 
+                  alt="Turbine Assembly Bay 04" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3bBSbkL20Q52tL3GD4KrR6biJsi0g2yiMuVvuCWUi3wBYZQPbtfWkdZNHFBwtIY98O-_sVC93LQ4xci-i-tgLzd_oUd80sXjw4rm27v50Cgi5HVJ79jwNKMYz6oPDuf3eDPQKogxtiR0VbN2ZaMD2jUtJQvjHv0tHsNLPR5pSEptsNHTJ0eu48B_FhOU73R40ykftRrjIg0xUjlGlmohUcrvJXMCu-gaNixgVY1nCsparzcmiEyp" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                <div className="relative z-10 flex items-center justify-between text-white">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-error animate-ping"></span>
+                    <span className="font-label-sm text-label-sm uppercase tracking-wide">Optical Feed 04-A</span>
+                  </div>
+                  <span className="font-code-md text-[10px] bg-black/50 backdrop-blur-sm px-1.5 py-0.5 rounded text-white font-mono">LIVE 4K 60FPS</span>
+                </div>
+              </div>
+
+              {/* Sensor Gauges Cards */}
+              <div className="md:col-span-2 grid grid-cols-3 gap-space-sm">
               {/* Sensor 1: Bearing Temp */}
               <div className="p-3 rounded-lg bg-surface-container-high flex flex-col justify-between border border-surface-container-highest/60">
                 <div className="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
@@ -437,6 +455,7 @@ export const CommandCenterView: React.FC<CommandCenterViewProps> = ({
                 </div>
               </div>
             </div>
+          </div>
 
             {/* Trend Chart SVG */}
             <div className="p-space-md rounded-lg bg-surface-container-lowest flex flex-col gap-2 border border-surface-container-high/40">

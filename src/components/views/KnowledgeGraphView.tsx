@@ -539,13 +539,13 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[1])}
                 transform="translate(360, 210)"
               >
-                <circle fill="#161b2b" r="26"></circle>
-                <circle className="group-hover:stroke-width-3" fill="none" r="26" stroke="#22D3EE" strokeWidth="2"></circle>
-                <circle fill="#22D3EE" filter="url(#glow-cyan)" r="7"></circle>
-                <text fill="#dee1f9" fontFamily="Inter" fontSize="11" fontWeight="600" textAnchor="middle" y="-32">
+                <circle className="fill-surface-container-low" r="26"></circle>
+                <circle className="group-hover:stroke-width-3" fill="none" r="26" stroke="#006398" strokeWidth="2"></circle>
+                <circle fill="#006398" filter="url(#glow-cyan)" r="7"></circle>
+                <text className="fill-on-surface font-semibold" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-32">
                   MPU6050 Tri-Axis
                 </text>
-                <text fill="#22D3EE" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="42">
+                <text className="fill-secondary font-mono" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="42">
                   4.82 mm/s [HIGH]
                 </text>
               </g>
@@ -556,11 +556,11 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[2])}
                 transform="translate(230, 330)"
               >
-                <circle fill="#161b2b" r="22"></circle>
-                <circle fill="none" r="22" stroke="#22D3EE" strokeWidth="1.5"></circle>
-                <circle fill="#22D3EE" r="5"></circle>
-                <text fill="#c7c4d7" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-28">DHT22 Thermal</text>
-                <text fill="#22D3EE" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="36">79.2°C</text>
+                <circle className="fill-surface-container-low" r="22"></circle>
+                <circle fill="none" r="22" stroke="#006398" strokeWidth="1.5"></circle>
+                <circle fill="#006398" r="5"></circle>
+                <text className="fill-on-surface-variant" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-28">DHT22 Thermal</text>
+                <text className="fill-secondary font-mono" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="36">79.2°C</text>
               </g>
 
               {/* Node ACS712 */}
@@ -569,11 +569,11 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[3])}
                 transform="translate(430, 520)"
               >
-                <circle fill="#161b2b" r="22"></circle>
-                <circle fill="none" r="22" stroke="#22D3EE" strokeWidth="1.5"></circle>
-                <circle fill="#22D3EE" r="5"></circle>
-                <text fill="#c7c4d7" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-28">ACS712 Motor Load</text>
-                <text fill="#22D3EE" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="36">41.8 A</text>
+                <circle className="fill-surface-container-low" r="22"></circle>
+                <circle fill="none" r="22" stroke="#006398" strokeWidth="1.5"></circle>
+                <circle fill="#006398" r="5"></circle>
+                <text className="fill-on-surface-variant" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-28">ACS712 Motor Load</text>
+                <text className="fill-secondary font-mono" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="36">41.8 A</text>
               </g>
 
               {/* Node PLC */}
@@ -582,10 +582,10 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[4])}
                 transform="translate(300, 470)"
               >
-                <rect fill="#161b2b" height="48" rx="8" width="48" x="-24" y="-24"></rect>
-                <rect fill="none" height="48" rx="8" stroke="#94A3B8" strokeWidth="2" width="48" x="-24" y="-24"></rect>
-                <text fill="#94A3B8" fontFamily="JetBrains Mono" fontSize="12" fontWeight="700" textAnchor="middle" y="4">PLC</text>
-                <text fill="#c7c4d7" fontFamily="Inter" fontSize="11" textAnchor="middle" y="38">Siemens S7-1500</text>
+                <rect className="fill-surface-container-low" height="48" rx="8" width="48" x="-24" y="-24"></rect>
+                <rect fill="none" height="48" rx="8" stroke="#777587" strokeWidth="2" width="48" x="-24" y="-24"></rect>
+                <text className="fill-outline font-bold font-mono" fontFamily="JetBrains Mono" fontSize="12" textAnchor="middle" y="4">PLC</text>
+                <text className="fill-on-surface-variant" fontFamily="Inter" fontSize="11" textAnchor="middle" y="38">Siemens S7-1500</text>
               </g>
 
               {/* Node INC-8942 */}
@@ -594,11 +594,11 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[5])}
                 transform="translate(570, 160)"
               >
-                <circle className="animate-ping" fill="none" r="36" stroke="#EF4444" strokeOpacity="0.4" strokeWidth="1.5"></circle>
-                <polygon fill="#161b2b" filter="url(#glow-red)" points="0,-28 28,18 -28,18" stroke="#EF4444" strokeWidth="2.5"></polygon>
-                <text fill="#EF4444" fontFamily="JetBrains Mono" fontSize="13" fontWeight="800" textAnchor="middle" y="8">!</text>
-                <text fill="#ffb4ab" fontFamily="Inter" fontSize="12" fontWeight="700" textAnchor="middle" y="-36">INC-8942 (CRITICAL)</text>
-                <text fill="#EF4444" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="34">Bearing Spalling</text>
+                <circle className="animate-ping" fill="none" r="36" stroke="#ba1a1a" strokeOpacity="0.4" strokeWidth="1.5"></circle>
+                <polygon className="fill-surface-container-low" filter="url(#glow-red)" points="0,-28 28,18 -28,18" stroke="#ba1a1a" strokeWidth="2.5"></polygon>
+                <text className="fill-error font-extrabold font-mono" fontFamily="JetBrains Mono" fontSize="13" textAnchor="middle" y="8">!</text>
+                <text className="fill-error font-bold" fontFamily="Inter" fontSize="12" textAnchor="middle" y="-36">INC-8942 (CRITICAL)</text>
+                <text className="fill-error font-mono font-semibold" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="34">Bearing Spalling</text>
               </g>
 
               {/* Node SOP-441 */}
@@ -607,11 +607,11 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[6])}
                 transform="translate(720, 180)"
               >
-                <rect fill="#161b2b" height="44" rx="6" width="44" x="-22" y="-22"></rect>
-                <rect fill="none" height="44" rx="6" stroke="#F59E0B" strokeWidth="2" width="44" x="-22" y="-22"></rect>
-                <text fill="#F59E0B" fontFamily="JetBrains Mono" fontSize="11" fontWeight="bold" textAnchor="middle" y="5">SOP</text>
-                <text fill="#dee1f9" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-28">SOP-441 Lubrication</text>
-                <text fill="#F59E0B" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="36">v3.4 Rev</text>
+                <rect className="fill-surface-container-low" height="44" rx="6" width="44" x="-22" y="-22"></rect>
+                <rect fill="none" height="44" rx="6" stroke="#00524b" strokeWidth="2" width="44" x="-22" y="-22"></rect>
+                <text className="fill-tertiary font-bold font-mono" fontFamily="JetBrains Mono" fontSize="11" textAnchor="middle" y="5">SOP</text>
+                <text className="fill-on-surface" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-28">SOP-441 Lubrication</text>
+                <text className="fill-tertiary font-mono" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="36">v3.4 Rev</text>
               </g>
 
               {/* Node Sarah Chen */}
@@ -620,12 +620,12 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[7])}
                 transform="translate(840, 280)"
               >
-                <circle fill="#161b2b" r="24"></circle>
-                <circle fill="none" r="24" stroke="#10B981" strokeWidth="2"></circle>
-                <circle fill="#10B981" fillOpacity="0.2" r="16"></circle>
-                <text fill="#10B981" fontFamily="JetBrains Mono" fontSize="11" fontWeight="bold" textAnchor="middle" y="4">SC</text>
-                <text fill="#dee1f9" fontFamily="Inter" fontSize="11" fontWeight="600" textAnchor="middle" y="-32">Sarah Chen</text>
-                <text fill="#10B981" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="38">Lead Reliability Eng</text>
+                <circle className="fill-surface-container-low" r="24"></circle>
+                <circle fill="none" r="24" stroke="#006c63" strokeWidth="2"></circle>
+                <circle fill="#006c63" fillOpacity="0.2" r="16"></circle>
+                <text className="fill-tertiary font-bold font-mono" fontFamily="JetBrains Mono" fontSize="11" textAnchor="middle" y="4">SC</text>
+                <text className="fill-on-surface font-semibold" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-32">Sarah Chen</text>
+                <text className="fill-tertiary font-mono" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="38">Lead Reliability Eng</text>
               </g>
 
               {/* Node Shift 3 Log */}
@@ -634,11 +634,11 @@ export const KnowledgeGraphView: React.FC<KnowledgeGraphViewProps> = ({
                 onClick={() => setSelectedNode(GRAPH_NODES[8])}
                 transform="translate(880, 150)"
               >
-                <circle fill="#161b2b" r="20"></circle>
-                <circle fill="none" r="20" stroke="#A855F7" strokeWidth="1.75"></circle>
-                <text fill="#A855F7" fontFamily="JetBrains Mono" fontSize="10" fontWeight="bold" textAnchor="middle" y="4">LOG</text>
-                <text fill="#dee1f9" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-26">Shift 3 Whine Note</text>
-                <text fill="#A855F7" fontFamily="JetBrains Mono" fontSize="9" textAnchor="middle" y="34">@3.2kHz Acoustic</text>
+                <circle className="fill-surface-container-low" r="20"></circle>
+                <circle fill="none" r="20" stroke="#3525cd" strokeWidth="1.75"></circle>
+                <text className="fill-primary font-bold font-mono" fontFamily="JetBrains Mono" fontSize="10" textAnchor="middle" y="4">LOG</text>
+                <text className="fill-on-surface" fontFamily="Inter" fontSize="11" textAnchor="middle" y="-26">Shift 3 Whine Note</text>
+                <text className="fill-primary font-mono" fontFamily="JetBrains Mono" fontSize="9" textAnchor="middle" y="34">@3.2kHz Acoustic</text>
               </g>
 
               {/* Node SAP WO */}
